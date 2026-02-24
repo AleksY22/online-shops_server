@@ -12,5 +12,5 @@
       "dest": "/src/main.ts"
     }
   ],
-  "installCommand": "npm install && npm rebuild argon2 --build-from-source"
+  "installCommand": "dnf install -y libatomic && npm install"
 }
