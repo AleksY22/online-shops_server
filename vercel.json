@@ -12,5 +12,5 @@
       "dest": "/src/main.ts"
     }
   ],
-  "installCommand": "npm install && npm build argon2 --build-from-source"
+  "installCommand": "npm install && npm rebuild argon2 --build-from-source"
 }
