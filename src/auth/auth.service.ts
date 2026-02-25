@@ -11,7 +11,7 @@ import { AuthDto } from './dto/auth.dto.js';
 import { Response } from 'express';
 import { ConfigService } from '@nestjs/config';
 import { IS_DEV_ENV } from '../libs/utils/is-dev.util.js';
-import { verify } from 'argon2';
+import { verify } from '@node-rs/argon2';
 
 @Injectable()
 export class AuthService {

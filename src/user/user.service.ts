@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma.service.js';
-import { hash } from 'argon2';
+import { hash } from '@node-rs/argon2';
 import { AuthDto } from '../auth/dto/auth.dto.js';
 
 @Injectable()
