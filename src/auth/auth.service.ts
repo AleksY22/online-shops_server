@@ -135,7 +135,7 @@ export class AuthService {
       expires: expiresIn,
       secure: true,
       // sameSite: this.configService.get('SAME_SATE'),
-      sameSite: 'strict',
+      sameSite: 'none',
     });
   }
 
