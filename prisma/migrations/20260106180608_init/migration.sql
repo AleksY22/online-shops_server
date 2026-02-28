@@ -9,7 +9,7 @@ CREATE TABLE "user" (
     "email" TEXT NOT NULL,
     "password" TEXT,
     "name" TEXT NOT NULL DEFAULT 'Не указано',
-    "picture" TEXT NOT NULL DEFAULT '/uploads/no-user-image.png'
+    "picture" TEXT NOT NULL DEFAULT 'https://online-shops-liard.vercel.app/uploads/no-user-image.png'
 );
 
 -- CreateTable
