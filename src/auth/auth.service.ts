@@ -134,8 +134,7 @@ export class AuthService {
       domain: this.configService.get('SERVER_DOMAIN'),
       expires: expiresIn,
       secure: true,
-      // sameSite: this.configService.get('SAME_SATE'),
-      sameSite: 'none',
+      sameSite: this.configService.get('SAME_SITE'),
     });
   }
 
