@@ -26,7 +26,8 @@ export class ProductDto {
     message: 'Путь к картине не может быть пустым!',
     each: true,
   })
-  images: string[];
+  //   images: string[];
+  images: string;
 
   //=======================================================
   @IsString({ message: 'Категория должна быть строкой!' })
