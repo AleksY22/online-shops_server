@@ -22,7 +22,7 @@ model User {
    email                String     @unique
    password             String?
    name                 String                     @default("Не указано")
-   picture              String                     @default("https://online-shops-liard.vercel.app/uploads/no-user-image.png")
+   picture              String                     @default("https://1zlvo8yzlnecjn2x.public.blob.vercel-storage.com//no-user-image.png")
 
    stores               Store[]
 
