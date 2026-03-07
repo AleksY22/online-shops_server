@@ -22,7 +22,7 @@ model User {
    email                String     @unique
    password             String?
    name                 String                     @default("Не указано")
-   picture              String                     @default("https://1zlvo8yzlnecjn2x.public.blob.vercel-storage.com//no-user-image.png")
+   picture              String                     @default("https://1zlvo8yzlnecjn2x.public.blob.vercel-storage.com/no-user-image.png")
 
    stores               Store[]
 
@@ -44,7 +44,7 @@ model Store {
    title                String
    description          String?
 
-   user                 User?       @relation(fields: [userId], references: [id])
+   user                 User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
    userId               String?                                                              @map("user_id")
 
    products             Product[]
@@ -84,7 +84,7 @@ model Product {
    color                Color?      @relation(fields: [colorId], references: [id])
    colorId              String?                                                              @map("color_id")
 
-   user                 User?       @relation(fields: [userId], references: [id])
+   user                 User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
    userId               String?                                                              @map("user_id")
 
    @@map("product")
@@ -133,7 +133,7 @@ model Review {
    text                 String
    rating               Int
 
-   user                 User?      @relation(fields: [userId], references: [id])
+   user                 User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
    userId               String?                                                              @map("user_id")
 
    product              Product?    @relation(fields: [productId], references: [id])
@@ -156,7 +156,7 @@ model Order {
    items                OrderItem[]
    total                Int
 
-   user                 User?       @relation(fields: [userId], references: [id])
+   user                 User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
    userId               String?                                                              @map("user_id")
 
    @@map("order")
